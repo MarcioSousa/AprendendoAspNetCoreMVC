@@ -4,7 +4,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using EstudosWebMvc.Models;
+using EstudosWebMvc.Models.ViewModels;
 
 namespace EstudosWebMvc.Controllers
 {
@@ -17,8 +17,8 @@ namespace EstudosWebMvc.Controllers
 
         public IActionResult About()
         {
-            ViewData["Message"] = "Estudos Web MVC com linguagem C#.";
-            ViewData["Professor"] = "Marcio Sousa";
+            ViewData["Message"] = "Your application description page.";
+
             return View();
         }
 
@@ -37,7 +37,7 @@ namespace EstudosWebMvc.Controllers
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            return View(new EstudosWebMvc.Models.ViewModels.ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
     }
 }
