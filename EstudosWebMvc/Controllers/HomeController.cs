@@ -17,8 +17,8 @@ namespace EstudosWebMvc.Controllers
 
         public IActionResult About()
         {
-            ViewData["Message"] = "Your application description page.";
-
+            ViewData["Message"] = "Estudos Web MVC com linguagem C#.";
+            ViewData["Professor"] = "Marcio Sousa";
             return View();
         }
 
