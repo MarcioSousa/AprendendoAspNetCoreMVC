@@ -13,6 +13,9 @@ namespace EstudosWebMvc.Models
         {
         }
 
-        public DbSet<EstudosWebMvc.Models.Departament> Departament { get; set; }
+        public DbSet<Departament> Departament { get; set; }
+        public DbSet<Seller> Seller { get; set; }
+        public DbSet<SalesRecord> SalesRecord { get; set; }
+
     }
 }
