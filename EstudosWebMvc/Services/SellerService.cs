@@ -41,7 +41,7 @@ namespace EstudosWebMvc.Services
             _context.Seller.Remove(obj);
             await _context.SaveChangesAsync();
             }
-            catch (DbUpdateException e)
+            catch (DbUpdateException)
             {
                 throw new IntegritException("Não pode deletar o vendedor(a) por que ele(a) tem vendas.");
             }
